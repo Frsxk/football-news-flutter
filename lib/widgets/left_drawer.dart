@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:football_news/screens/menu.dart';
 import 'package:football_news/screens/newslist_form.dart';
+import 'package:football_news/screens/news_entry_list.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -62,14 +63,14 @@ class LeftDrawer extends StatelessWidget {
           ),
           // Buat ListTile baru untuk ke halaman melihat news
           ListTile(
-            leading: const Icon(Icons.article_outlined),
-            title: const Text('View News'),
-            // Bagian redirection ke NewsListPage
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('News List'),
             onTap: () {
-              /*
-              TODO: Buatlah routing ke NewsListPage di sini,
-              setelah halaman NewsListPage sudah dibuat.
-              */
+              // Route to news list page
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NewsEntryListPage()),
+              );
             },
           ),
         ],
