@@ -99,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
 
                       // Check credentials
                       final response = await request
-                          .login("http://localhost:8000/auth/login/", {
+                          .login("https://muhammad-faza44-footballnews.pbp.cs.ui.ac.id/auth/login/", {
                         'username': username,
                         'password': password,
                       });
